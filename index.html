@@ -21643,6 +21643,13 @@ input[type="number"]::-webkit-inner-spin-button{opacity:.3;}
 /* ===== TWO-COL LAYOUT ===== */
 .layout-2col{display:grid;grid-template-columns:280px minmax(0,1fr);gap:18px;align-items:start;}
 @media(max-width:900px){.layout-2col{grid-template-columns:1fr;} .form-grid{grid-template-columns:1fr;}}
+@media(max-width:1080px){
+#epGrid,#fsGrid{grid-template-columns:1fr!important;}
+.factor-grid{grid-template-columns:1fr 1fr!important;}
+.t,.t th,.t td,.t input,.card-body,.form-group label,.lc{font-size:12px!important;}
+.card-header{font-size:11px!important;}
+.rates-grid{grid-template-columns:1fr!important;}
+}
 
 /* ===== INFO TIP ===== */
 .info-tip{display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;background:rgba(255,255,255,.25);color:#fff;font-size:9px;font-weight:700;cursor:help;margin-left:4px;position:relative;}
@@ -22100,7 +22107,7 @@ input[type="number"]::-webkit-inner-spin-button{opacity:.3;}
       </div>
 
       <!-- FAKTOREN & STAFFELN + STUNDENSÄTZE -->
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;">
+      <div id="fsGrid" style="display:grid;grid-template-columns:1fr 1fr;gap:18px;">
         <div class="card">
           <div class="card-header h-cyan">Faktoren &amp; Staffeln <small style="font-weight:400;opacity:.7">(pro Position)</small></div>
           <div class="card-body">
