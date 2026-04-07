@@ -3,37 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Angebots-Assistent – Eroform GmbH (iPad)</title>
-<!-- localStorage-Fallback für iPad/file:// -->
-<script>
-(function(){
-  try {
-    var t = '__ls_test__';
-    localStorage.setItem(t, '1');
-    localStorage.removeItem(t);
-  } catch(e) {
-    var _store = {};
-    Object.defineProperty(window, 'localStorage', {
-      value: {
-        getItem: function(k){ return _store[k] || null; },
-        setItem: function(k,v){ _store[k] = String(v); },
-        removeItem: function(k){ delete _store[k]; },
-        clear: function(){ _store = {}; },
-        get length(){ return Object.keys(_store).length; },
-        key: function(i){ return Object.keys(_store)[i] || null; }
-      },
-      writable: false, configurable: false
-    });
-  }
-})();
-// Globaler Fehler-Handler: zeigt JS-Fehler als Banner an
-window.onerror = function(msg, url, line, col, err) {
-  var d = document.createElement('div');
-  d.style.cssText = 'position:fixed;top:0;left:0;right:0;background:red;color:white;padding:12px;font-size:14px;z-index:99999;font-family:monospace;white-space:pre-wrap;';
-  d.textContent = 'JS-FEHLER: ' + msg + '\nZeile: ' + line + ', Spalte: ' + col + (err && err.stack ? '\n' + err.stack : '');
-  document.body ? document.body.prepend(d) : document.addEventListener('DOMContentLoaded', function(){ document.body.prepend(d); });
-};
-</script>
+<title>Angebots-Assistent – Eroform GmbH</title>
 <!-- docx-js für Word-Export (inline eingebettet) -->
 <script>var docx = function(exports) {
   "use strict";var __defProp = Object.defineProperty;
@@ -22248,7 +22218,6 @@ input[type="number"]::-webkit-inner-spin-button{opacity:.3;}
 <!--           JAVASCRIPT           -->
 <!-- ============================== -->
 <script>
-document.title='JS-START OK';
 /* ===== CONSTANTS ===== */
 const RATES={cad:74,cam:55,pm:70,fert_fa:40,fert_ha:25,senk:22,draht:10,flach:10,rund:10,weich:24,hart:24,dreh:43,mess:9,masch_fa:40,masch_ha:25};
 const RATE_LABELS={cad:'CAD-Konstruktion',cam:'CAM-Programmierung',pm:'Projektmanagement',fert_fa:'Fertigung Facharbeiter',fert_ha:'Fertigung Hilfsarbeiter',senk:'Senkerodieren',draht:'Drahterodieren',flach:'Flachschleifen',rund:'Rundschleifen',weich:'Weichfräsen',hart:'Hartfräsen',dreh:'Drehfräsen',mess:'Messmaschinen',masch_fa:'Maschine Facharbeiter',masch_ha:'Maschine Hilfsarbeiter'};
